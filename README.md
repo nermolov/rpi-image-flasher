@@ -3,11 +3,10 @@ Quick project to create an image flashing kiosk for Raspberry Pi Images, intende
 
 ### Usage
 
-1. Create the images/ directory
-2. Download all of your images to flash
-3. Edit image information at the top of ```main.js```
-4. Run ```npm install```
-5. Start ```node main.js``` as root
+1. Download all of your images to flash and place them in the ```images/``` directory
+2. Edit image information in ```images.json```
+3. Run ```npm install```
+4. Start ```node main.js``` as root
 NOTE: Script is configured to write to ```/dev/sda``` as the device, please make sure that is your SD Card before using the script to prevent data loss.
 
 ### License

@@ -11,27 +11,8 @@ var drivelist = require('drivelist');
 var imageWrite = require('etcher-image-write');
 var fs = require('fs');
 
-//specify information for images
-var avimages = {
-    "raspbian": {
-        "title": "Raspbian",
-        "description": "The default and defacto operating system for Raspberry Pi.",
-        "image": "test.jpg",
-        "file": "raspbian.img"
-    },
-    "raspbian-lite": {
-        "title": "Raspbian Lite",
-        "description": "The cut down and slimmer version of Raspbian, no graphical interface, no unnecessary software.",
-        "image": "test.jpg",
-        "file": "raspbian-lite.img"
-    },
-    "noobs": {
-        "title": "N.O.O.B.S.",
-        "description": "The OS for beginners.",
-        "image": "test.jpg",
-        "file": "noobs.img"
-    }
-};
+//read image information in from file
+var avimages = JSON.parse(fs.readFileSync('images.json', 'utf8'));
 
 //set device
 var sdcard = '/dev/sdb';
